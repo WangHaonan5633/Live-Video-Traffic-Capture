@@ -437,8 +437,8 @@ def run_capture_session_restart_browser(cfg: RunConfig, category_name: str, room
 # --------------------------------
 def main():
     cfg = RunConfig(
-        chrome_binary=r"D:\Undergraduate_study\Project\LiveTafficCapture\chrome-win64\chrome.exe",
-        chromedriver_path=r"D:\Undergraduate_study\Project\LiveTafficCapture\chromedriver-win64\chromedriver-win64\chromedriver.exe",
+        chrome_binary=r".\chrome-win64\chrome.exe",
+        chromedriver_path=r".\chromedriver-win64\chromedriver-win64\chromedriver.exe",
         network_iface="WLAN",
         pcap_dir="captures",
         rooms_per_category=8,
@@ -448,7 +448,7 @@ def main():
         headless=False,
 
         # ✅ 必须复用登录态：注意要带 --
-        user_data_arg=r"--user-data-dir=C:\Users\WangH\AppData\Local\Google\Chrome for Testing\User Data",
+        user_data_arg=r"--user-data-dir=C:\Users\***\AppData\Local\Google\Chrome for Testing\User Data",
         # 可选：profile_directory="Default",
     )
 
@@ -522,4 +522,5 @@ if __name__ == "__main__":
             print(f"第 {i} 次运行报错：{e}")
             traceback.print_exc()
         time.sleep(1)
+
 
