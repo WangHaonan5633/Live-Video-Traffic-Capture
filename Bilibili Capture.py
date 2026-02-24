@@ -488,8 +488,8 @@ def run_capture_session(cfg: RunConfig, category_name: str, room_url: str):
 # ----------------------------
 def main():
     cfg = RunConfig(
-        chrome_binary=r"D:\Undergraduate_study\Project\LiveTafficCapture\chrome-win64\chrome.exe",
-        chromedriver_path=r"D:\Undergraduate_study\Project\LiveTafficCapture\chromedriver-win64\chromedriver-win64\chromedriver.exe",
+        chrome_binary=r".\chrome-win64\chrome.exe",
+        chromedriver_path=r".\chromedriver-win64\chromedriver-win64\chromedriver.exe",
         network_iface="WLAN",
         pcap_dir="captures",
         rooms_per_category=8,
@@ -499,7 +499,7 @@ def main():
         headless=False,
 
         # ✅ 必须复用登录态：务必带 --
-        user_data_arg=r"--user-data-dir=C:\Users\WangH\AppData\Local\Google\Chrome for Testing\User Data",
+        user_data_arg=r"--user-data-dir=C:\Users\*****\AppData\Local\Google\Chrome for Testing\User Data",
 
         # 可选：如果你的登录态在 Profile 1，就写 Profile 1；默认一般是 Default
         profile_directory="Default",
@@ -581,4 +581,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
